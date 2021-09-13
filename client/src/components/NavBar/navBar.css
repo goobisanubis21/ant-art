@@ -1,0 +1,29 @@
+div nav a {
+    text-decoration: none;
+}
+
+div nav div ul li a {
+    text-decoration: none;
+}
+
+div nav {
+    height: 80px;
+}
+
+div nav div {
+    padding: 15px;
+}
+
+div nav div ul li {
+    padding: 30px;
+}
+
+@media screen and (max-width: 991.33px) {
+    div nav {
+        height: auto
+    }
+
+    div nav div ul li {
+        padding: 0;
+    }
+}
