@@ -1,0 +1,63 @@
+.main-home-div {
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-align: center;
+}
+
+.home-title-div {
+    padding: 30px;
+}
+
+.home-title {
+    font-size: 65px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.home-title-undertext {
+    font-size: 18px;
+    color: #86868b;
+}
+
+.featured-div {
+    margin-top: 50px;
+}
+
+.featured-art {
+    margin: 30px;
+    width: 80%;
+    padding: 30px;
+    box-shadow: 0 0 20px 5px;
+}
+
+.featured-info {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.featured-info p {
+    color: #86868b;
+}
+
+.line {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 1px;
+    background-color: black;
+}
+
+.upcoming-events {
+    width: 40%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.upcoming-events h2 {
+    font-weight: 600;
+}
+
+.upcoming-events p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}

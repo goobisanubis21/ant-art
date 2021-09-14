@@ -19,6 +19,9 @@ function NavBar() {
                             <Link to='/gallery'><div className="nav-link">Gallery</div></Link>
                         </li>
                         <li className="nav-item">
+                            <Link to='/graphicnovel'><div className="nav-link">Graphic Novel</div></Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to='/nft'><div className="nav-link">NFTs</div></Link>
                         </li>
                         <li className="nav-item">
