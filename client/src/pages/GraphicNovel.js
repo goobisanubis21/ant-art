@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import GraphicComp from '../components/GraphicComp/GraphicComp';
 
 function GraphicNovel() {
     return (
         <div>
-            novel
+            <GraphicComp />
         </div>
     )
 }

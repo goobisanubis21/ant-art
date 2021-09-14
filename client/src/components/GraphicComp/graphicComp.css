@@ -1,0 +1,88 @@
+.main-graphic-div {
+    text-align: center;
+}
+
+.title-div {
+    padding-top: ;
+    color: white;
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overview {
+    width: 40%;
+    margin: 40px auto;
+    font-weight: 500;
+}
+
+.cover-div {
+    /* background-color: black; */
+    padding-top: 50px;
+}
+
+.cover {
+    width: 40%;
+}
+
+.pages {
+    width: 45%;
+    margin: 40px auto;
+}
+
+.pages-div button {
+    margin: 30px;
+    padding: 10px;
+    width: 120px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.pages-div button:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.buyBtn {
+    background-color: #0071e3;
+    font-weight: 600;
+    color: white;
+    border-radius: 968px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.buyBtn:hover {
+    background-color: #0281ff;
+}
+
+@media screen and (max-width: 1400px) {
+    .cover {
+        width: 50%;
+    }
+    .overview {
+        width: 60%;
+    }
+    .pages {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cover {
+        width: 90%;
+    }
+    .pages-div button {
+        width: auto;
+        display: block;
+        margin: 30px auto;
+    }
+    .pages {
+        width: 100%;
+    }
+}
