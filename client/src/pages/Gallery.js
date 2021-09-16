@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import GalleryComp from '../components/GalleryComp/GalleryComp';
 
 function Gallery() {
     return (
         <div>
-            gallery
+            <GalleryComp />
         </div>
     )
 }
