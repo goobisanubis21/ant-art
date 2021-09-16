@@ -20,13 +20,16 @@ import P16 from '../../images/page16.jpg';
 import P17 from '../../images/page17.jpg';
 import P18 from '../../images/page18.jpg';
 import P19 from '../../images/page19.jpg';
-import { Collection } from 'mongoose';
+import CurlyGIF from '../../images/curlyGIF.GIF';
+import PhillGIF from '../../images/phillGIF.GIF';
+import ZapGIF from '../../images/zapGIF.GIF';
+
 
 function GraphicComp() {
 
-    let pages = [P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19]
+    let pages = [Cover, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19]
 
-    const [currentPage, setCurrentPage] = useState(P1)
+    const [currentPage, setCurrentPage] = useState(Cover)
     const [index, setIndex] = useState(0)
 
     function nextPage() {
@@ -34,9 +37,9 @@ function GraphicComp() {
             setCurrentPage(pages[index + 1])
 
         }
-        if (index >= 18) {
+        if (index >= 19) {
             setIndex(0)
-            setCurrentPage(P1)
+            setCurrentPage(Cover)
         } else {
             setIndex(index + 1)
         }
@@ -48,7 +51,7 @@ function GraphicComp() {
 
         }
         if (index <= 0) {
-            setIndex(18)
+            setIndex(19)
             setCurrentPage(P19)
         } else {
             setIndex(index - 1)
@@ -57,70 +60,47 @@ function GraphicComp() {
 
     return (
         <div className='main-graphic-div'>
+            {/* <div className='curlyPhill-div'>
+                <img className='curlyPhill' src={Curly} alt='curly'></img>
+                <img className='curlyPhill' src={Phill} alt='phill'></img>
+            </div> */}
             <div className='title-div'>
                 <h1>EarthBound Misfit</h1>
                 <p className='overview'>Join Curly and Phill on the adventure of a lifetime in this amazing story written in the style of a graphic novel. Curly is your typical 15 year old kid living life when out of nowhere he is bombarded by an alien named Phill, who is on the run. He was created to save the universe and together, Curly and Phill learn about friendship, heroism and overcoming fear.
                 </p>
-                <h6>Family Friendly, Intended For Ages 8 And Up.</h6>
-                <button className='buyBtn'>Buy</button>
+                <h6>Family Friendly, Intended For All Ages.</h6>
+                <button className='buyBtn1'>Buy</button>
             </div>
-            <div className='cover-div'>
-                <img className='cover' src={Cover} alt='book cover'></img>
+            <div className='zap-div'>
+                <img className='zap' src={ZapGIF} alt='zap gif'></img>
             </div>
             <br />
-            <div>
+            <div className='sneak'>
                 <h2>Exclusive Sneak Preview</h2>
                 <p>Here is the first 19 pages free for you to enjoy</p>
             </div>
             <div className='pages-div'>
-                <button style={{ backgroundColor: 'rgb(212, 181, 0)', color: 'black' }} onClick={prevPage}>PREVIOUS</button>
+                <button className='prevBtn' style={{ backgroundColor: 'rgb(212, 181, 0)', color: 'black' }} onClick={prevPage}>PAGE PRIOR</button>
                 <img className='pages' src={currentPage} alt='pages'></img>
-                <button style={{ backgroundColor: 'green', color: 'white' }} onClick={nextPage}>NEXT</button>
+                <button className='nextBtn' style={{ backgroundColor: 'green', color: 'white' }} onClick={nextPage}>NEXT PAGE</button>
             </div>
-            <div>
-                <p><strong>Page {index + 1}</strong></p>
+            <div className='pageNumber-div'>
+                <p><strong>Page {index}</strong></p>
             </div>
-            <div>
-                <button className='buyBtn'>Buy</button>
+
+            <div className='gifs'>
+                <div>
+                    <img className='curlyGIF' src={CurlyGIF} alt='curlygif'></img>
+                </div>
+                <div>
+                    <button className='buyBtn'>Buy</button>
+                </div>
+                <div>
+                    <img className='phillGIF' src={PhillGIF} alt='phillygif'></img>
+                </div>
             </div>
         </div>
     )
 }
 
 export default GraphicComp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
-//                     <div className="carousel-inner">
-//                         <div className="carousel-item active" data-interval="0" interval='1000000000'>
-//                             <img src={P1} className="d-block" alt="..."></img>
-//                         </div>
-//                         <div className="carousel-item" data-interval="0">
-//                             <img src={P2} className="d-block" alt="..."></img>
-//                         </div>
-//                         <div className="carousel-item">
-//                             <img src={P3} className="d-block" alt="..."></img>
-//                         </div>
-//                     </div>
-//                     <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-//                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-//                         <span className="sr-only">Previous</span>
-//                     </a>
-//                     <a className="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-//                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
-//                         <span className="sr-only">Next</span>
-//                     </a>
-//                 </div>

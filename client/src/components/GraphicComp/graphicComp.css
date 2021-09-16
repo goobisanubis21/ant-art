@@ -1,14 +1,17 @@
 .main-graphic-div {
     text-align: center;
+    background-image: url('https://res.cloudinary.com/dtodsxdoy/image/upload/b_rgb:000000,o_50/v1631810779/blue-universe-956981-1500x844_umeshb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 255, 255);
 }
 
 .title-div {
     padding-top: 50px;
     padding-bottom: 20px;
     color: white;
-    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
+    border-radius: 20px;
 }
 
 .overview {
@@ -17,18 +20,44 @@
     font-weight: 500;
 }
 
-.cover-div {
-    /* background-color: black; */
-    padding-top: 50px;
+/* .curlyPhill-div {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .curlyPhill {
+    width: 20%;
+} */
+
+.zap-div {
+    background-color: rgb(27, 39, 28);
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 20px;
 }
 
-.cover {
-    width: 40%;
+.zap {
+    width: 30%;
+}
+
+.sneak {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.pages-div {
+    background-color: black;
+    padding-top: 50px;
 }
 
 .pages {
     width: 45%;
     margin: 40px auto;
+    max-width: 965px;
 }
 
 .pages-div button {
@@ -44,6 +73,21 @@
     color: white !important;
 }
 
+.buyBtn1{
+    background-color: #0071e3;
+    font-weight: 600;
+    color: white;
+    border-radius: 968px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    box-shadow: 0px 0px 80px 45px rgb(80, 0, 0);
+}
+
 .buyBtn {
     background-color: #0071e3;
     font-weight: 600;
@@ -55,16 +99,47 @@
     padding-bottom: 8px;
     border: none;
     margin-top: 10px;
-    margin-bottom: 30px;
+    box-shadow: 0px 0px 100px 25px rgb(119, 255, 119);
+}
+
+.buyBtn1:hover {
+    background-color: #0281ff;
+    box-shadow: 0px 0px 100px 20px rgb(119, 255, 119);
 }
 
 .buyBtn:hover {
     background-color: #0281ff;
+    box-shadow: 0px 0px 80px 50px rgb(80, 0, 0);
+}
+
+.gifs {
+    width: 100%;
+    display: flex;
+    margin: 0px auto;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.curlyGIF {
+    margin-left: 100px;
+}
+
+.phillGIF {
+    margin-right: 100px;
+}
+.pageNumber-div {
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1400px) {
-    .cover {
-        width: 50%;
+    .zap-div {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    .zap {
+        width: 40%;
     }
     .overview {
         width: 60%;
@@ -72,18 +147,58 @@
     .pages {
         width: 50%;
     }
+    .buyBtn {
+        margin: 50px;
+    }
+    .gifs {
+        display: block;
+        margin-bottom: 0;
+        padding: 50px;
+    }
+    .curlyGIF {
+        margin-left: 0px;
+    }
+    .phillGIF {
+        margin-right: 0px;
+    }
+    .title-div {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    
 }
 
 @media screen and (max-width: 800px) {
-    .cover {
+    .zap {                                                                                                   
         width: 90%;
+    }
+    .sneak {
+        margin-top: 0;
     }
     .pages-div button {
         width: auto;
         display: block;
-        margin: 30px auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     .pages {
         width: 100%;
+    }
+    .curlyPhill {
+        width: 50%;
+    }
+    .pageNumber-div {
+        margin-bottom: 20px;
+    }
+    .curlyGIF {
+        width: 100%;
+    }
+    .phillGIF {
+        width: 100%;
+    }
+    .pageNumber-div {
+        margin-bottom: 30px;
     }
 }
