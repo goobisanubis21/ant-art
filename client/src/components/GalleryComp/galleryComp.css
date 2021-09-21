@@ -1,3 +1,52 @@
 .oil-paintings-main-div {
     text-align: center;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.painting-title-container {
+    margin-top: 60px;
+}
+
+.painting-container {
+    width: 60%;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 30px 5px;
+    background-color: rgb(224, 224, 224);
+}
+
+.painting-container h3 {
+    padding: 20px;
+}
+
+.paintings {
+    width: 80%;
+}
+
+.galleryBuyBtn {
+    background-color: #0071e3;
+    font-weight: 600;
+    color: white;
+    border-radius: 968px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.galleryBuyBtn:hover {
+    background-color: #0281ff;
+}
+
+.painting-price {
+    color: rgb(119, 119, 119);
+}
+
+.painting-sold {
+    color: red;
 }
