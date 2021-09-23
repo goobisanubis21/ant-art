@@ -33,140 +33,165 @@ function GalleryComp() {
             name: 'Mr. White',
             price: 5000,
             src: Walter,
+            size: '30x40 Inches',
         },
         {
             id: '1',
             name: 'Elephant',
             price: 'SOLD',
             src: Elephant,
+            size: '30x40 Inches',
         },
         {
             id: '2',
             name: 'Marshal',
             price: 2000,
             src: Eminem,
+            size: '24x36 Inches',
         },
         {
             id: '3',
             name: 'The End',
             price: 3000,
             src: Endgame,
+            size: '24x36 Inches',
         },
         {
             id: '4',
             name: 'Float',
             price: 'SOLD',
             src: Float,
+            size: '20x30 Inches'
         },
         {
             id: '5',
             name: 'Frank',
             price: 'SOLD',
             src: Frank,
+            size: '18x24 Inches'
         },
         {
             id: '6',
             name: 'Aliens',
             price: 2000,
             src: Georgio,
+            size: '20x30 Inches'
         },
         {
             id: '7',
             name: 'Baby Groot',
             price: 2000,
             src: Groot,
+            size: '20x30 Inches'
         },
         {
             id: '8',
             name: 'Horse',
             price: 'Work In Progress',
             src: Horse,
+            size: '18x24 Inches'
         },
         {
             id: '9',
             name: 'Jellyfish',
             price: 500,
             src: Jellyfish,
+            size: '30x40 Inches'
         },
         {
             id: '10',
             name: 'Job',
             price: 3000,
             src: Jobs,
+            size: '30x40 Inches'
         },
         {
             id: '11',
             name: 'Leopard',
             price: 2000,
             src: Leopard,
+            size: '30x40 Inches'
         },
         {
             id: '12',
             name: 'Migrate',
             price: 400,
             src: Migration,
+            size: '20x30 Inches'
         },
         {
             id: '13',
             name: 'Smash',
             price: 2500,
             src: Smash,
+            size: '30x40 Inches'
         },
         {
             id: '14',
             name: 'Mr. Soprano',
             price: 3000,
             src: Sopranos,
+            size: '30x40 Inches'
         },
         {
             id: '15',
             name: 'The Stooges',
             price: 'SOLD',
             src: Stooges1,
+            size: '20x30 Inches'
         },
         {
             id: '16',
             name: 'The Stooges 2',
             price: 'SOLD',
             src: Stooges2,
+            size: '20x30 Inches'
         },
         {
             id: '17',
             name: 'The Stooges 3',
             price: 'SOLD',
             src: Stooges3,
+            size: '30x40 Inches'
         },
         {
             id: '18',
             name: 'The Stooges 4',
             price: 'SOLD',
             src: Stooges4,
+            size: '30x40 Inches'
         },
         {
             id: '19',
             name: 'Coral',
             price: 3000,
             src: Turtles,
+            size: '30x40 Inches'
         },
         {
             id: '20',
             name: 'The Buddah',
             price: 'SOLD',
             src: Buddah,
+            size: '20x30 Inches'
         },
         {
             id: '21',
             name: 'Zuuuu',
             price: 'SOLD',
             src: Zuzu,
+            size: '10x16in Oval'
         },
     ])
 
     function buyPainting(e) {
         let clicked = e.target
-        let buyPainting = []
-        buyPainting.push(allArt.find(art => art.id === clicked.id))
+        let buyPainting = (allArt.find(art => art.id === clicked.id))
         console.log('this', buyPainting)
+        let storage = JSON.parse(localStorage.getItem('cartArt'))
+        if (storage == null) storage = []
+        storage.push(buyPainting)
+        localStorage.setItem('cartArt', JSON.stringify(storage))
     }
 
     return (

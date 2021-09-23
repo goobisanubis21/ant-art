@@ -30,9 +30,9 @@ function NavBar() {
                         <li className="nav-item">
                             <Link to='/contact'><div className="nav-link">Contact</div></Link>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <Link to='/cart'><div className="nav-link">Cart</div></Link>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
             </nav>
