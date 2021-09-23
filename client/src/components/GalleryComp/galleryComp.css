@@ -39,6 +39,20 @@
     margin-bottom: 10px;
 }
 
+.galleryBuyBtnSold {
+    background-color: #e30000;
+    font-weight: 600;
+    color: white;
+    border-radius: 968px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .galleryBuyBtn:hover {
     background-color: #0281ff;
 }
