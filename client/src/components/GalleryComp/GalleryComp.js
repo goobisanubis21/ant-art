@@ -194,6 +194,19 @@ function GalleryComp() {
         localStorage.setItem('cartArt', JSON.stringify(storage))
     }
 
+    function zoom(e) {
+        let zoomClick = e.target
+        let scroll = document.getElementById(zoomClick.id)
+        console.log(zoomClick.className)
+        if (zoomClick.className === 'paintings') {
+            zoomClick.className = 'zoom-paintings'
+            scroll.scrollIntoView()
+        } else {
+            zoomClick.className = 'paintings'
+            scroll.scrollIntoView()
+        }
+    }
+
     return (
         <div className='oil-paintings-main-div'>
             <div className='painting-title-container'>
@@ -207,7 +220,7 @@ function GalleryComp() {
                         {paint.price === 'SOLD' ?
                             <div>
                                 <p className='painting-sold'>{paint.price}</p>
-                                <img className='paintings' src={paint.src} alt='art'></img>
+                                <img id={paint.id} className='paintings' src={paint.src} onClick={zoom} alt='art'></img>
                                 <div>
                                     <button disabled id={paint.id} className='galleryBuyBtnSold' onClick={buyPainting}>X</button>
                                 </div>
@@ -215,7 +228,7 @@ function GalleryComp() {
                             :
                             <div>
                                 <p className='painting-price'>{paint.price}<strong className='painting-price'> USD</strong></p>
-                                <img className='paintings' src={paint.src} alt='art'></img>
+                                <img id={paint.id} className='paintings' src={paint.src} alt='art' onClick={zoom}></img>
                                 <div>
                                     <button id={paint.id} className='galleryBuyBtn' onClick={buyPainting}>ADD TO CART</button>
                                 </div>
