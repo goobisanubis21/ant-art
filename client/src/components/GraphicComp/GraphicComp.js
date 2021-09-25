@@ -24,6 +24,8 @@ import CurlyGIF from '../../images/curlyGIF.GIF';
 import PhillGIF from '../../images/phillGIF.GIF';
 import ZapGIF from '../../images/zapGIF.GIF';
 
+import { v4 as uuidv4 } from 'uuid';
+
 
 function GraphicComp() {
 
@@ -58,18 +60,27 @@ function GraphicComp() {
         }
     }
 
+    function buyBook() {
+        let book = {
+            id: uuidv4(),
+            name: 'EarthBound Misfit',
+            src: Cover,
+            price: '19.99'
+        }
+        let storage = JSON.parse(localStorage.getItem('cartArt'))
+        if (storage == null) storage = []
+        storage.push(book)
+        localStorage.setItem('cartArt', JSON.stringify(storage))
+    }
+
     return (
         <div className='main-graphic-div'>
-            {/* <div className='curlyPhill-div'>
-                <img className='curlyPhill' src={Curly} alt='curly'></img>
-                <img className='curlyPhill' src={Phill} alt='phill'></img>
-            </div> */}
             <div className='title-div'>
                 <h1>EarthBound Misfit</h1>
-                <p className='overview'>Join Curly and Phill on the adventure of a lifetime in this amazing story written in the style of a graphic novel. Curly is your typical 15 year old kid living life when out of nowhere he is bombarded by an alien named Phill, who is on the run. He was created to save the universe and together, Curly and Phill learn about friendship, heroism and overcoming fear.
+                <p className='overview'>Join Curly and Phill on the adventure of a lifetime in this amazing story written in the style of a graphic novel for 94 incredible pages. Curly is your typical 15 year old kid living life when out of nowhere he is bombarded by an alien named Phill, who is on the run. He was created to save the universe and together, Curly and Phill learn about friendship, heroism and overcoming fear.
                 </p>
                 <h6>Family Friendly, Intended For All Ages.</h6>
-                <button className='buyBtn1'>Buy</button>
+                <button className='buyBtn1' onClick={buyBook}>Buy $19.99</button>
             </div>
             <div className='zap-div'>
                 <img className='zap' src={ZapGIF} alt='zap gif'></img>
@@ -93,7 +104,7 @@ function GraphicComp() {
                     <img className='curlyGIF' src={CurlyGIF} alt='curlygif'></img>
                 </div>
                 <div>
-                    <button className='buyBtn'>Buy</button>
+                    <button className='buyBtn' onClick={buyBook}>Buy $19.99</button>
                 </div>
                 <div>
                     <img className='phillGIF' src={PhillGIF} alt='phillygif'></img>

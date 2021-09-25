@@ -2,4 +2,8 @@
     text-align: center;
     padding: 60px;
     background-color: rgb(238, 238, 238);
+    margin-top: auto;
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
 }

@@ -1,0 +1,41 @@
+.cart-container {
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-align: center;
+    min-height: 100vh;
+}
+.cart-is-empty {
+    text-align: center;
+    padding: 500px;
+}
+
+.item-container {
+    width: 40%;
+    margin: 60px auto;
+    box-shadow: 0 0 30px 5px;
+    padding: 20px;
+}
+
+.cart-items {
+    width: 90%;
+}
+
+.remove-btn {
+    color: white;
+    background-color: rgb(126, 0, 0);
+    border: none;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.remove-btn:hover {
+    background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+    .cart-items {
+        width: 50%;
+    }
+}
